@@ -1,7 +1,7 @@
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adject: 100%; -webkit-overflow-scrolling: touch; overflow-y: scroll; }
 
 /** remove default marign */
-body { margin: 0; color: #999999; background-color: white; }
+body { margin: 0; color: #999; background-color: #fff; }
 
 /* HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
@@ -119,13 +119,13 @@ h4 { font-size: 16px; }
 
 h5, h6 { font-size: 13.6px; text-transform: uppercase; }
 
-input:-moz-placeholder, textarea:-moz-placeholder { color: #cccccc; }
+input:-moz-placeholder, textarea:-moz-placeholder { color: #ccc; }
 
-input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #ccc; }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #ccc; }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #ccc; }
 
 @media print { * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
   a, a:visited { text-decoration: underline; }
@@ -143,7 +143,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 
 html, body { height: 100%; background-color: white; }
 
-body { background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32)); background: radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32)); }
+body { background: -webkit-radial-gradient(100% 200% ellipse, transparent, rgba(0, 0, 0, 0.32)); background: radial-gradient(100% 200% ellipse, transparent, rgba(0, 0, 0, 0.32)); }
 
 .clearfix { zoom: 1; }
 
@@ -201,6 +201,25 @@ body { background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), 
 .intro-spread-main .intro-people-wrap3 { position: absolute; top: 1.38889rem; left: 51.81347%; width: 25.90674%; opacity: 1; }
 .intro-spread-main .intro-people-wrap4 { position: absolute; top: -2.77778rem; left: 80.31088%; width: 32.8152%; opacity: 1; z-index: 2; }
 
+.intro-intro-wrap { width: 100%; height: 100%; background-color: #d6d6d6; }
+
+.intro-intro-people1 { display: none; width: 100%; height: 100%; background: url(../../images/intro-people1.jpg) no-repeat center center; background-size: 100%; }
+
+.intro-intro-people2 { display: none; width: 100%; height: 100%; background: url(../../images/intro-people2.jpg) no-repeat center center; background-size: 100%; }
+
+.intro-intro-people3 { display: none; width: 100%; height: 100%; background: url(../../images/intro-people3.jpg) no-repeat center center; background-size: 100%; }
+
+.intro-intro-people4 { display: none; width: 100%; height: 100%; background: url(../../images/intro-people4.jpg) no-repeat center center; background-size: 100%; }
+
+.intro-letter-ltxt { width: 26.3695%; margin: 13.88889rem 0 0 5.37057%; }
+
+.intro-letter-rimg { width: 67.13212%; margin-top: 6.94444rem; }
+
+.intro-last-page { position: absolute; top: 50%; left: 50%; width: 36.09023%; height: 5.41667rem; margin: -2.69444rem 0 0 -18.04511%; padding-left: 2.68528%; }
+.intro-last-page .intro-text-wrap { width: 37.94643%; height: 5.41667rem; }
+.intro-last-page .intro-eng-wrap { width: 27.52976%; margin-top: 1.47222rem; }
+.intro-last-page .intro-contact-btn { display: block; width: 12.94643%; margin-top: 1.38889rem; }
+
 @media screen and (min-width: 1280px) { html { font-size: 36px; }
   .intro-eng-wrap { margin-top: 4.08333rem; } }
 @media screen and (max-width: 1280px) { html { font-size: 32px; }
@@ -208,7 +227,9 @@ body { background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), 
 @media screen and (max-width: 1000px) { html { font-size: 28px; }
   .intro-eng-wrap { margin-top: 2.97222rem; } }
 @media screen and (max-width: 750px) { html { font-size: 22px; }
-  .intro-eng-wrap { margin-top: 2.69444rem; } }
+  .intro-eng-wrap { margin-top: 2.69444rem; }
+  .intro-letter-ltxt { margin: 19.44444rem 0 0 5.37057%; }
+  .intro-letter-rimg { margin-top: 12.5rem; } }
 @media screen and (max-width: 640px) { html { font-size: 20px; }
   .intro-eng-wrap { margin-top: 2.13889rem; } }
 @media screen and (max-width: 480px) { html { font-size: 12px; }
@@ -220,7 +241,9 @@ body { background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), 
   .intro-spread-main .intro-svg-wrap7-2 { display: block; top: -18.33333rem; left: -98.95052%; -webkit-transform: scaleX(2); transform: scaleX(2); }
   .intro-spread-main .intro-svg-wrap8-3 { display: block; top: 27.77778rem; left: -44.97751%; -webkit-transform: rotate(-180deg) scale(4, 5); transform: rotate(-180deg) scale(4, 5); -webkit-filter: blur(1px); filter: blur(1px); }
   .intro-spread-main .intro-svg-wrap9 { top: -12.77778rem; }
-  .intro-spread-main .intro-svg-wrap10-2 { display: block; top: -36.11111rem; left: -164.91754%; -webkit-transform: scale(3); transform: scale(3); } }
+  .intro-spread-main .intro-svg-wrap10-2 { display: block; top: -36.11111rem; left: -164.91754%; -webkit-transform: scale(3); transform: scale(3); }
+  .intro-letter-ltxt { margin: 25rem 0 0 5.37057%; }
+  .intro-letter-rimg { margin-top: 19.44444rem; } }
 @media screen and (max-width: 384px) { html { font-size: 12px; } }
 @media screen and (max-width: 320px) { html { font-size: 10px; }
   .intro-spread-main .intro-svg-wrap2-2 { display: block; top: -16.66667rem; }
@@ -229,3 +252,5 @@ body { background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), 
   .intro-spread-main .intro-svg-wrap8-3 { top: 25rem; }
   .intro-spread-main .intro-svg-wrap9 { top: -11.80556rem; }
   .intro-spread-main .intro-svg-wrap10-2 { top: -26.11111rem; } }
+
+/*# sourceMappingURL=common.css.map */

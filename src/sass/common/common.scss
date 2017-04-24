@@ -91,7 +91,7 @@ body {
     transition: all linear 1.5s 2s;
 }
 
-// 展开动画
+// animation
 // .intro-svg-wrap1-2, .intro-svg-wrap2-2, .intro-svg-wrap3-2, .intro-svg-wrap5-2, .intro-svg-wrap6-2, .intro-svg-wrap7-2 {
 //     display: none;
 // }
@@ -274,6 +274,76 @@ body {
     }
 }
 
+// intro page
+.intro-intro-wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #d6d6d6;
+}
+.intro-intro-people1 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/intro-people1.jpg) no-repeat center center;
+    background-size: 100%;
+}
+.intro-intro-people2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/intro-people2.jpg) no-repeat center center;
+    background-size: 100%;
+}
+.intro-intro-people3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/intro-people3.jpg) no-repeat center center;
+    background-size: 100%;
+}
+.intro-intro-people4 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/intro-people4.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+// letter page
+.intro-letter-ltxt {
+    width: per(491,1862);
+    margin: rem(500,36) 0 0 per(100,1862);
+}
+.intro-letter-rimg {
+    width: per(1250,1862);
+    margin-top: rem(250,36);
+}
+
+// last page
+.intro-last-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: per(672,1862);
+    height: rem(195,36);
+    margin: rem(-97,36) 0 0 per(-336,1862);
+    padding-left: per(50,1862);
+    .intro-text-wrap {
+        width: per(255,672);
+        height: rem(195,36);
+    }
+
+    .intro-eng-wrap {
+        width: per(185,672);
+        margin-top: rem(53,36);
+    }
+    .intro-contact-btn {
+        display: block;
+        width: per(87,672);
+        margin-top: rem(50,36);
+    }
+}
+
 
 @include min-screen(1280px) {
     html {
@@ -305,6 +375,12 @@ body {
     }
     .intro-eng-wrap {
         margin-top: rem(97,36);
+    }
+    .intro-letter-ltxt {
+        margin: rem(700,36) 0 0 per(100,1862);
+    }
+    .intro-letter-rimg {
+        margin-top: rem(450,36);
     }
 }
 @include max-screen(640px){
@@ -371,6 +447,12 @@ body {
             -webkit-transform: scale(3);
             transform: scale(3);
         }
+    }
+    .intro-letter-ltxt {
+        margin: rem(900,36) 0 0 per(100,1862);
+    }
+    .intro-letter-rimg {
+        margin-top: rem(700,36);
     }
 }
 @include max-screen(384px){
