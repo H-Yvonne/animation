@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../../src/css/common/common.css">
 </head>
 <body>
-	<div class="intro-container">
+	<div class="intro-container intro-change-icon">
 		<!-- intro-spread-main -->
 		<div class="intro-main intro-spread-main clearfix" style="display:none;">
 			<div class="intro-people-block">
@@ -25,16 +25,16 @@
 					</div>
 				</div>
 				<a href="javascript:;" class="intro-opacity-wrap intro-people-wrap1 js-people-btn" data-attr="1">
-					<img src="../../src/images/people1.png" width="100%" />
+					<img src="../../src/images/people/people1.png" width="100%" />
 				</a>
 				<a href="javascript:;" class="intro-opacity-wrap intro-people-wrap2 js-people-btn" data-attr="2">
-					<img src="../../src/images/people2.png" width="100%" />
+					<img src="../../src/images/people/people2.png" width="100%" />
 				</a>
 				<a href="javascript:;" class="intro-opacity-wrap intro-people-wrap3 js-people-btn" data-attr="3">
-					<img src="../../src/images/people3.png" width="100%" />
+					<img src="../../src/images/people/people3.png" width="100%" />
 				</a>
 				<a href="javascript:;" class="intro-opacity-wrap intro-people-wrap4 js-people-btn" data-attr="4">
-					<img src="../../src/images/people4.png" width="100%" />
+					<img src="../../src/images/people/people4.png" width="100%" />
 				</a>
 			</div>
 			<div class="fl intro-text-wrap">
@@ -126,48 +126,94 @@
 			</div>
 		</div>
 		<!-- 人物简介 -->
-		<div class="intro-intro-wrap" style="display:none;">
-			<div class="intro-intro-people1 js-people-intro"></div>
-			<div class="intro-intro-people2 js-people-intro"></div>
-			<div class="intro-intro-people3 js-people-intro"></div>
-			<div class="intro-intro-people4 js-people-intro"></div>
+		<div class="intro-intro-wrap">
+			<div class="intro-intro-people intro-intro-people1">
+				<div class="intro-intro-img">
+					<img src="../../src/images/intro/people1-img.png" width="100%" />
+					<span class="intro-intro-shadow"></span>
+				</div>
+				<div class="intro-intro-title">
+					<img src="../../src/images/intro/people1-title.png" width="100%" />
+				</div>
+			</div>
+			<div class="intro-intro-people intro-intro-people2"></div>
+			<div class="intro-intro-people intro-intro-people3"></div>
+			<div class="intro-intro-people intro-intro-people4"></div>
+		</div>
+		<!-- 诞生了 -->
+		<div class="intro-icon-wrap" style="display:none;">
+			<div class="intro-icon-main">
+				<a href="javascript:;" class="intro-icon-btn">
+					<img src="../../src/images/icon.png" width="100%" />
+				</a>
+				<div class="intro-icon-tImg">
+					<img src="../../src/images/birth/birth-img1.png" width="100%" />
+				</div>
+				<div class="intro-icon-bImg">
+					<img src="../../src/images/birth/birth-img2.png" width="100%" />
+				</div>
+			</div>
+		</div>
+		<div class="intro-select-wrap" style="display:none;">
+			<div class="intro-select-main">
+				<div class="fl intro-select-movie">
+					<img src="../../src/images/letter/letter1-name.png" width="100%" />
+				</div>
+				<div class="fl intro-select-exhibition">
+					<img src="../../src/images/letter/letter2-name.png" width="100%" />
+				</div>
+				<div class="fl intro-select-game">
+					<img src="../../src/images/letter/letter3-name.png" width="100%" />
+				</div>
+				<div class="fl intro-select-gift">
+					<img src="../../src/images/letter/letter4-name.png" width="100%" />
+				</div>
+			</div>
 		</div>
 		<!-- 字母 -->
 		<div class="intro-letter-wrap" style="display:none;">
-			<div class="clearfix">
-				<div class="fl intro-letter-ltxt">
-					<img src="../../src/images/letter1.png" width="100%" />
+			<div class="intro-letter-wrap intro-letter-wrap1 clearfix" style="display:none;">
+				<div class="intro-letter-describe">
+					<img src="../../src/images/letter/letter1-describe.png" width="100%" />
 				</div>
-				<div class="fr intro-letter-rimg">
-					<img src="../../src/images/letter1-img.png" width="100%" />
+				<div class="intro-letter-name">
+					<img src="../../src/images/letter/letter1-name.png" width="100%" />
 				</div>
-			</div>
-			<div class="clearfix">
-				<div class="fl intro-letter-ltxt">
-					<img src="../../src/images/letter2.png" width="100%" />
-				</div>
-				<div class="fr intro-letter-rimg">
-					<img src="../../src/images/letter2-img.png" width="100%" />
+				<div class="intro-letter-img">
+					<img src="../../src/images/letter/letter1-img.png" width="100%" />
 				</div>
 			</div>
-			<div class="clearfix">
-				<div class="fl intro-letter-ltxt">
-					<img src="../../src/images/letter3.png" width="100%" />
+			<div class="intro-letter-wrap intro-letter-wrap2 clearfix" style="display:none;">
+				<div class="intro-letter-describe">
+					<img src="../../src/images/letter/letter2-describe.png" width="100%" />
 				</div>
-				<div class="fr intro-letter-rimg">
-					<img src="../../src/images/letter3-img.png" width="100%" />
+				<div class="intro-letter-name">
+					<img src="../../src/images/letter/letter2-name.png" width="100%" />
+				</div>
+				<div class="intro-letter-img"></div>
+			</div>
+			<div class="intro-letter-wrap intro-letter-wrap3 clearfix" style="display:none;">
+				<div class="intro-letter-describe">
+					<img src="../../src/images/letter/letter3-describe.png" width="100%" />
+				</div>
+				<div class="intro-letter-name">
+					<img src="../../src/images/letter/letter3-name.png" width="100%" />
+				</div>
+				<div class="intro-letter-img">
+					<img src="../../src/images/letter/letter3-img.png" width="100%" />
 				</div>
 			</div>
-			<div class="clearfix">
-				<div class="fl intro-letter-ltxt">
-					<img src="../../src/images/letter4.png" width="100%" />
+			<div class="intro-letter-wrap intro-letter-wrap4 clearfix">
+				<div class="intro-letter-describe">
+					<img src="../../src/images/letter/letter4-describe.png" width="100%" />
 				</div>
-				<div class="fr intro-letter-rimg">
-					<img src="../../src/images/letter4-img.png" width="100%" />
+				<div class="intro-letter-name">
+					<img src="../../src/images/letter/letter4-name.png" width="100%" />
 				</div>
+				<div class="intro-letter-img"></div>
 			</div>
 		</div>
-		<div class="intro-last-page">
+		<div class="intro-last-page" style="display:none;">
 			<div class="fl intro-text-wrap">
 				<!-- 笔画1 -->
 				<svg class="intro-svg-wrap intro-svg-wrap1-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">

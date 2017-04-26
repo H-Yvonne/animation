@@ -278,14 +278,28 @@ body {
 .intro-intro-wrap {
     width: 100%;
     height: 100%;
-    background-color: #d6d6d6;
 }
-.intro-intro-people1 {
-    display: none;
+.intro-intro-people {
+    position: relative;
     width: 100%;
     height: 100%;
-    background: url(../../images/intro-people1.jpg) no-repeat center center;
-    background-size: 100%;
+}
+.intro-intro-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .intro-intro-shadow {
+        display: none;
+    }
+}
+.intro-intro-people1 {
+    .intro-intro-title {
+        position: absolute;
+        top: rem(613,36);
+        left: per(168,4000);
+        width: per(475,4000);
+    }
 }
 .intro-intro-people2 {
     display: none;
@@ -309,14 +323,140 @@ body {
     background-size: 100%;
 }
 
-// letter page
-.intro-letter-ltxt {
-    width: per(491,1862);
-    margin: rem(500,36) 0 0 per(100,1862);
+// icon page
+.intro-icon-wrap {
+    width: 100%;
+    height: 100%;
 }
-.intro-letter-rimg {
-    width: per(1250,1862);
-    margin-top: rem(250,36);
+.intro-icon-main {
+    position: relative;
+    width: per(1416,1862);
+    margin: rem(502,36) auto 0;
+}
+.intro-icon-btn {
+    display: block;
+    position: absolute;
+    top: rem(-253,36);
+    left: per(599,1416);
+    width: per(341,1416);
+}
+.intro-icon-tImg {
+    width: per(1113,1416);
+}
+.intro-icon-bImg {
+    width: per(867,1416);
+    margin-left: per(299,1416);
+}
+
+// select page
+.intro-select-wrap {
+    width: 100%;
+    height: 100%;
+}
+.intro-select-main {
+    width: per(1658,1862);
+    padding-left: per(63,1862);
+    margin: rem(468,36) auto 0;
+}
+.intro-select-movie {
+    width: per(415,1658);
+    margin-right: per(79,1658);
+}
+.intro-select-exhibition {
+    width: per(390,1658);
+    margin-right: per(21,1658);
+}
+.intro-select-game {
+    width: per(347,1658);
+    margin-right: per(41,1658);
+}
+.intro-select-gift {
+    width: per(299,1658);
+}
+
+// letter page
+.intro-letter-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.intro-letter-describe, .intro-letter-name, .intro-letter-img {
+    position: absolute;
+}
+.intro-letter-wrap1 {
+    .intro-letter-describe {
+        top: rem(314,36);
+        left: per(171,1862);
+        width: per(680,1862);
+    }
+    .intro-letter-name {
+        top: rem(466,36);
+        left: per(193,1862);
+        width: per(419,1862);
+    }
+    .intro-letter-img {
+        bottom: 0;
+        right: 0;
+        width: per(1032,1862);
+    }
+}
+.intro-letter-wrap2 {
+    .intro-letter-describe {
+        top: rem(317,36);
+        left: per(384,1862);
+        width: per(890,1862);
+    }
+    .intro-letter-name {
+        top: rem(466,36);
+        left: per(690,1862);
+        width: per(390,1862);
+    }
+    .intro-letter-img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/letter/letter2-img.png) no-repeat center center;
+        background-size: cover;
+    }
+}
+.intro-letter-wrap3 {
+    .intro-letter-describe {
+        top: rem(315,36);
+        left: per(1032,1862);
+        width: per(762,1862);
+    }
+    .intro-letter-name {
+        top: rem(489,36);
+        left: per(1102,1862);
+        width: per(347,1862);
+    }
+    .intro-letter-img {
+        top: 0;
+        left: 0;
+        width: per(1348,1862);
+    }
+}
+.intro-letter-wrap4 {
+    .intro-letter-describe {
+        top: rem(317,36);
+        left: per(1070,1862);
+        width: per(686,1862);
+    }
+    .intro-letter-name {
+        top: rem(488,36);
+        left: per(1490,1862);
+        width: per(299,1862);
+    }
+    .intro-letter-img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/letter/letter4-img.png) no-repeat center center;
+        background-size: cover;
+    }
 }
 
 // last page
@@ -360,6 +500,9 @@ body {
     .intro-eng-wrap {
         margin-top: rem(127,36);
     }
+    .intro-icon-btn {
+        top: rem(-203,36);
+    }
 }
 @include max-screen(1000px) {
     html {
@@ -367,6 +510,9 @@ body {
     }
     .intro-eng-wrap {
         margin-top: rem(107,36);
+    }
+    .intro-icon-btn {
+        top: rem(-163,36);
     }
 }
 @include max-screen(750px){
@@ -454,6 +600,87 @@ body {
     .intro-letter-rimg {
         margin-top: rem(700,36);
     }
+    .intro-letter-wrap1 {
+        .intro-letter-describe {
+            width: per(1400,1862);
+        }
+        .intro-letter-name {
+            top: rem(500,36);
+            width: per(1000,1862);
+        }
+        .intro-letter-img {
+            width: per(1432,1862);
+        }
+    }
+    .intro-letter-wrap2 {
+        .intro-letter-describe {
+            top: rem(400,36);
+            left: per(184,1862);
+            width: per(1500,1862);
+        }
+        .intro-letter-name {
+            top: rem(600,36);
+            left: per(390,1862);
+            width: per(1200,1862);
+        }
+    }
+    .intro-letter-wrap3 {
+        .intro-letter-describe {
+            top: rem(1050,36);
+            left: per(632,1862);
+            width: per(1100,1862);
+        }
+        .intro-letter-name {
+            top: rem(1150,36);
+            left: per(900,1862);
+            width: per(600,1862);
+        }
+        .intro-letter-img {
+            width: per(1862,1862);
+        }
+    }
+    .intro-letter-wrap4 {
+        .intro-letter-describe {
+            top: rem(250,36);
+            left: per(570,1862);
+            width: per(1186,1862);
+        }
+        .intro-letter-name {
+            top: rem(388,36);
+            left: per(1190,1862);
+            width: per(500,1862);
+        }
+    }
+    .intro-icon-main {
+        margin: rem(902,36) auto 0;
+    }
+    .intro-icon-btn {
+        top: rem(-183,36);
+    }
+    .intro-select-main {
+        margin: rem(820,36) auto 0;
+    }
+    .intro-intro-people1 {
+        .intro-intro-img {
+            position: relative;
+            top: rem(575,36);
+            .intro-intro-shadow {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: per(257,1500);
+                width: per(225,1500);
+                height: rem(100,36);
+                background: rgba(225,225,225,.5);
+                background: linear-gradient(to bottom,transparent,rgba(255,255,255,0.5));
+            }
+        }
+        .intro-intro-title {
+            top: rem(1413,36);
+            left: per(686,1500);
+            width: per(667,1500);
+        }
+    }
 }
 @include max-screen(384px){
     html {
@@ -465,10 +692,6 @@ body {
         font-size: 10px; 
     }
     .intro-spread-main {
-        // .intro-svg-wrap2-1 {
-        //     top: per(-115,667);
-        //     left: per(-525,667);
-        // }
         .intro-svg-wrap2-2 {
             display: block;
             top: rem(-600,36);
@@ -488,6 +711,39 @@ body {
         }
         .intro-svg-wrap10-2 {
             top: rem(-940,36);
+        }
+    }
+    .intro-letter-wrap3 {
+        .intro-letter-describe {
+            top: rem(850,36);
+        }
+        .intro-letter-name {
+            top: rem(950,36);
+        }
+    }
+    .intro-letter-wrap4 {
+        .intro-letter-describe {
+            top: rem(180,36);
+        }
+        .intro-letter-name {
+            top: rem(288,36);
+        }
+    }
+    .intro-icon-main {
+        margin: rem(802,36) auto 0;
+    }
+    .intro-icon-btn {
+        top: rem(-153,36);
+    }
+    .intro-select-main {
+        margin: rem(720,36) auto 0;
+    }
+    .intro-intro-people1 {
+        .intro-intro-img {
+            top: rem(450,36);
+        }
+        .intro-intro-title {
+            top: rem(1113,36);
         }
     }
 }
