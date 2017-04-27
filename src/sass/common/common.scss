@@ -280,6 +280,7 @@ body {
     height: 100%;
 }
 .intro-intro-people {
+    display: none;
     position: relative;
     width: 100%;
     height: 100%;
@@ -302,25 +303,42 @@ body {
     }
 }
 .intro-intro-people2 {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/intro-people2.jpg) no-repeat center center;
-    background-size: 100%;
+    .intro-intro-img {
+        left: per(633,4000);
+        width: per(3020,4000);
+    }
+    .intro-intro-title {
+        position: absolute;
+        top: rem(278,36);
+        right: per(217,4000);
+        width: per(475,4000);
+    }
 }
 .intro-intro-people3 {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/intro-people3.jpg) no-repeat center center;
-    background-size: 100%;
+    .intro-intro-img {
+        left: initial;
+        right: 0;
+        width: per(3116,4000);
+    }
+    .intro-intro-title {
+        position: absolute;
+        top: rem(378,36);
+        right: per(280,4000);
+        width: per(475,4000);
+    }
 }
 .intro-intro-people4 {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/intro-people4.jpg) no-repeat center center;
-    background-size: 100%;
+    .intro-intro-img {
+        left: initial;
+        right: 0;
+        width: per(3849,4000);
+    }
+    .intro-intro-title {
+        position: absolute;
+        top: rem(378,36);
+        right: per(900,4000);
+        width: per(475,4000);
+    }
 }
 
 // icon page
@@ -692,6 +710,53 @@ body {
             width: per(667,1500);
         }
     }
+    .intro-intro-people2 {
+        .intro-intro-img {
+            position: relative;
+            left: 0;
+            top: rem(575,36);
+            width: per(4000,4000);
+            .intro-intro-shadow {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: per(100,1500);
+                width: per(700,1500);
+                height: rem(100,36);
+                background: rgba(225,225,225,.5);
+                background: linear-gradient(to bottom,transparent,rgba(255,255,255,0.5));
+            }
+        }
+        .intro-intro-title {
+            top: rem(178,36);
+            right: per(750,1500);
+            width: per(667,1500);
+        }
+    }
+    .intro-intro-people3 {
+        .intro-intro-img {
+            position: relative;
+            top: rem(375,36);
+            width: 100%;
+        }
+        .intro-intro-title {
+            top: rem(1413,36);
+            left: per(686,1500);
+            width: per(667,1500);
+        }
+    }
+    .intro-intro-people4 {
+        .intro-intro-img {
+            position: relative;
+            top: rem(375,36);
+            width: 100%;
+        }
+        .intro-intro-title {
+            top: rem(1250,36);
+            left: per(130,1500);
+            width: per(667,1500);
+        }
+    }
 }
 @include max-screen(384px){
     html {
@@ -755,6 +820,19 @@ body {
         }
         .intro-intro-title {
             top: rem(1113,36);
+        }
+    }
+    .intro-intro-people3 {
+        .intro-intro-img {
+            top: rem(400,36);
+        }
+        .intro-intro-title {
+            top: rem(1113,36);
+        }
+    }
+    .intro-intro-people4 {
+        .intro-intro-title {
+            top: rem(1050,36);
         }
     }
 }

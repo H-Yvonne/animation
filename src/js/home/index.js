@@ -12,7 +12,7 @@ var mouseClick = function () {
 		$('div.intro-intro-people'+id).show();
 	}).on('click', 'div.intro-intro-wrap', function () {
 		// 隐藏个人简介
-		$('div.js-people-intro').hide();
+		$('div.intro-intro-people').hide();
 		$('div.intro-intro-wrap').hide();
 		$('div.intro-main').show();
 	}).on('click', 'a.intro-contact-btn', function () {
