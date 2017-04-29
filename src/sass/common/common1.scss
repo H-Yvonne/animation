@@ -5,15 +5,16 @@
 @import "../core/_css3";
 @import "../core/_mixin";
 @import "../core/_media_queries";
-
-html,body {
-	height: 100%;
-	background-color: white;
+html,
+body {
+    height: 100%;
+    background-color: white;
 }
 
 .clearfix {
     zoom: 1;
 }
+
 .clearfix:after {
     content: '.';
     height: 0;
@@ -23,76 +24,84 @@ html,body {
     line-height: 0;
     height: 0;
 }
+
 .fl {
     float: left;
 }
+
 .fr {
     float: right;
 }
 
 .intro-container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background: -webkit-radial-gradient(100% 200% ellipse,rgba(0,0,0,0),rgba(0,0,0,0.32)); 
-	background: radial-gradient(100% 200% ellipse,rgba(0,0,0,0),rgba(0,0,0,0.32));
-	overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
+    background: radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
+    overflow: hidden;
 }
 
 .intro-main {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: per(1158,1862);
-	height: per(516,895);
-	margin: rem(-258,26) 0 0 per(-663,1862);
-	padding-left: per(168,1862);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: per(1158, 1862);
+    height: per(516, 895);
+    margin: rem(-258, 26) 0 0 per(-663, 1862);
+    padding-left: per(168, 1862);
 }
 
 .intro-text-wrap {
-	position: relative;
-	width: per(667,1158);
-	height: per(378,516);
+    position: relative;
+    width: per(667, 1158);
+    height: per(378, 516);
 }
+
 .intro-svg-wrap {
-	fill: #231f20;
-	-webkit-filter: drop-shadow(0 0 rem(8,26) rgba(0,0,0,0.3));
-  	filter: drop-shadow(0 0 rem(8,26) rgba(0,0,0,0.3));
+    fill: #231f20;
+    -webkit-filter: drop-shadow(0 0 rem(8, 26) rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 rem(8, 26) rgba(0, 0, 0, 0.3));
 }
+
 .intro-svg-wrap1 {
-	position: absolute;
-	top: per(227,378);
-	left: per(-10,667);
-	width: per(455,667);
+    position: absolute;
+    top: per(227, 378);
+    left: per(-10, 667);
+    width: per(455, 667);
 }
+
 .intro-svg-wrap2 {
-	position: absolute;
-	top: per(188,378);
-	left: per(-10,667);
-	width: per(455,667);
+    position: absolute;
+    top: per(188, 378);
+    left: per(-10, 667);
+    width: per(455, 667);
 }
+
 .intro-svg-wrap3 {
-	position: absolute;
-	top: per(30,378);
-	left: per(348,667);
-	width: per(455,667);
+    position: absolute;
+    top: per(30, 378);
+    left: per(348, 667);
+    width: per(455, 667);
 }
+
 .intro-svg-wrap4 {
-	position: absolute;
-	top: 0;
-	left: per(276,667);
-	width: per(455,667);
+    position: absolute;
+    top: 0;
+    left: per(276, 667);
+    width: per(455, 667);
 }
+
 .intro-svg-wrap5 {
-	position: absolute;
-	top: per(95,378);
-	left: per(213,667);
-	width: per(455,667);
+    position: absolute;
+    top: per(95, 378);
+    left: per(213, 667);
+    width: per(455, 667);
 }
 
 .intro-eng-wrap {
-	width: per(491,1158);
-	margin-top: per(127,516);
+    width: per(491, 1158);
+    margin-top: per(127, 516);
 }
 
 @include min-screen(1280px) {
@@ -100,38 +109,45 @@ html,body {
         font-size: 26px;
     }
 }
+
 @include max-screen(1280px) {
     html {
         font-size: 26px;
     }
 }
+
 @include max-screen(1000px) {
     html {
         font-size: 24px;
     }
 }
-@include max-screen(750px){
-    html { 
+
+@include max-screen(750px) {
+    html {
         font-size: 22px;
     }
 }
-@include max-screen(640px){
-    html { 
+
+@include max-screen(640px) {
+    html {
         font-size: 20px;
     }
 }
-@include max-screen(480px){
-    html { 
-        font-size: 12px; 
+
+@include max-screen(480px) {
+    html {
+        font-size: 12px;
     }
 }
-@include max-screen(384px){
+
+@include max-screen(384px) {
     html {
-        font-size: 12px; 
+        font-size: 12px;
     }
 }
-@include max-screen(320px){
+
+@include max-screen(320px) {
     html {
-        font-size: 10px; 
+        font-size: 10px;
     }
 }
