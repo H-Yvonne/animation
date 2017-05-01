@@ -1,6 +1,6 @@
-// init setting
+// // init setting
 @import "../core/_setting.scss";
-// reset css
+// // reset css
 @import "../core/_reset.scss";
 @import "../core/_css3";
 @import "../core/_mixin";
@@ -9,11 +9,299 @@ html,
 body {
     height: 100%;
     background-color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+html {
+    background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
+    background: radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
 }
 
 body {
-    background: -webkit-radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
-    background: radial-gradient(100% 200% ellipse, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
+    margin: 0 auto;
+    background: none;
+    position: relative;
+}
+
+.intro-container {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+// 首页
+// 笔画
+$width: 40%;
+.page1,
+.page2,
+.page3,
+.page4,
+.page4-1 {
+    margin: 0 auto;
+}
+
+.page4-1 {
+    position: relative;
+}
+
+.page1 {
+    transition: all ease-out 0.5s;
+    -webkit-transition: all ease-out 0.5;
+    opacity: 1;
+    .page1-1 {
+        &.end {
+            transform: scale(2);
+            opacity: 0;
+        }
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all ease-out 0.5s;
+        -webkit-transition: all ease-out 0.5;
+        img {
+            position: absolute;
+            width: $width;
+            margin-top: -$width/2;
+            margin-bottom: -$width/2;
+            margin-left: -$width;
+            left: 50%;
+            top: 50%;
+            fill: black;
+            -webkit-filter: drop-shadow(0 0 0.22222rem rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 0 0.22222rem rgba(0, 0, 0, 0.3));
+            transition: all ease-out 1.5s;
+            -webkit-transition: all ease-out 1.5s;
+            pointer-events: none;
+        }
+        .intro-svg-wrap8-3 {
+            top: auto;
+            bottom: 50%;
+        }
+    } // 首页右侧logo
+    .page1-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $width;
+        margin-top: -$width/4;
+        opacity: 1;
+        transition: all 0.5s ease-in;
+    }
+    .page1-3 {
+        display: none;
+        opacity: 0;
+        transition: all 0.2s linear; // -webkit-transition: all ease-out 0.1s;
+        top: 0;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        &.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+        &.end {
+            transform: scale(5);
+            opacity: 0;
+            top: 140%;
+            left: -25%;
+            .image-2 {
+                width: 5%;
+                position: absolute;
+                top: 19%;
+                left: 53%;
+                opacity: 0;
+                display: none;
+            }
+        }
+        img {
+            width: $width;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+            opacity: 1;
+        }
+        .image-1 {
+            width: 40%;
+            top: 18%;
+            left: 13%;
+            position: absolute;
+        }
+        .image-2 {
+            width: 5%;
+            position: absolute;
+            top: 19%;
+            left: 53%;
+            transition: all 0.2s ease-in;
+        }
+        .image-3 {
+            width: 28.8%;
+            position: absolute;
+            top: 25.5%;
+            left: 6.4%;
+        }
+        .image-4 {
+            width: 12.5%;
+            position: absolute;
+            top: 26.8%;
+            left: 42%;
+        }
+        .image-5 {
+            width: 19.5%;
+            position: absolute;
+            top: 33%;
+            left: 53%;
+        }
+        .image-6 {
+            width: 24.6%;
+            position: absolute;
+            top: 21.5%;
+            left: 73.5%;
+        }
+    }
+}
+
+.page1.active {
+    .page1-1 {
+        .intro-svg-wrap1-1 {
+            top: 19%;
+            left: 134%;
+            transform: scale(1.25);
+        }
+        .intro-svg-wrap1-2 {
+            top: 26.34%;
+            left: 70%;
+            transform: rotateX(0deg) rotateY(0deg) scaleX(2.2) scaleY(1.5);
+            z-index: 10;
+        }
+        .intro-svg-wrap2-1 {
+            top: 44.5%;
+            left: 36%;
+            transform: rotateZ(180deg) rotateY(0deg) scale(1.3);
+        }
+        .intro-svg-wrap2-2 {
+            top: -11%;
+            left: 40%;
+            transform: rotateX(180deg) rotateY(180deg) scale(3.5);
+        }
+        .intro-svg-wrap3-1 {
+            left: 28.9%;
+            top: 64.2%;
+            z-index: 10;
+            transform: rotateX(0deg) rotateY(0deg) scale(1.3);
+        }
+        .intro-svg-wrap3-2 {
+            left: 118%;
+            top: 139%;
+            transform: rotateY(180deg) scale(3);
+        }
+        .intro-svg-wrap4 {
+            top: 37%;
+            left: 16%;
+            transform: scaleX(4.5) scaleY(3);
+        }
+        .intro-svg-wrap5-1 {
+            top: 62.2%;
+            left: 39%;
+            z-index: 10;
+            transform: scaleX(1.2) scaleY(1);
+        }
+        .intro-svg-wrap5-2 {
+            top: 88%;
+            left: 112%;
+            transform: rotateY(180deg);
+            z-index: 10;
+        }
+        .intro-svg-wrap6-1 {
+            top: 71.3%;
+            transform: rotateZ(90deg) scale(1.3);
+            left: 30%;
+        }
+        .intro-svg-wrap6-2 {
+            top: 55.4%;
+            left: 89.5%;
+            transform: rotateZ(90deg) scale(1.3);
+            z-index: 10;
+            -webkit-filter: blur(0.5px);
+            -moz-filter: blur(0.5px);
+            -ms-filter: blur(0.5px);
+            filter: blur(0.5px);
+        }
+        .intro-svg-wrap7-1 {
+            top: 18%;
+            left: 60%;
+        }
+        .intro-svg-wrap7-2 {
+            top: 42.8%;
+            left: 75%;
+            transform: scaleX(1.8);
+            z-index: 10;
+        }
+        .intro-svg-wrap8-1 {
+            top: 17.4%;
+            left: 83%;
+            transform: scale(1.3);
+        }
+        .intro-svg-wrap8-2 {
+            top: 66%;
+            left: 113%;
+            transform: rotateZ(180deg) scale(1.3);
+            z-index: 10;
+        }
+        .intro-svg-wrap8-3 {
+            transform: rotateX(180deg) scale(3.6);
+            left: 35.2%;
+            bottom: 14.5%;
+            z-index: 10;
+            -webkit-filter: blur(0.8px);
+            -moz-filter: blur(0.8px);
+            -ms-filter: blur(0.8px);
+            filter: blur(0.8px);
+        }
+        .intro-svg-wrap8-4 {
+            transform: scale(4) rotate(180deg);
+            top: 113%;
+            left: 58%;
+            -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px);
+        }
+        .intro-svg-wrap9 {
+            top: 9.8%;
+            left: 67.5%;
+            transform: rotateZ(90deg) SCALE(1.4);
+        }
+        .intro-svg-wrap10 {
+            top: 51.5%;
+            left: 70.5%;
+            transform: SCALE(1.3);
+            z-index: 10;
+        }
+        .intro-svg-wrap11 {
+            transform: SCALE(1.3);
+            top: 8.4%;
+            left: 28.8%;
+        }
+        .intro-svg-wrap12 {
+            top: 21%;
+            left: 70.6%;
+            transform: SCALE(1.3);
+        }
+        .intro-svg-wrap13 {
+            top: 50.3%;
+            left: 112%;
+            transform: rotateY(180deg) SCALE(1.3);
+        }
+    }
+    .page1-2 {
+        opacity: 0;
+    }
 }
 
 .clearfix {
@@ -38,13 +326,48 @@ body {
     float: right;
 }
 
-.intro-container {
-    position: relative;
+.intro-container-page2,
+.intro-container-page3,
+.intro-container-page4,
+.intro-container-page5 {
+    display: none;
+    position: absolute;
     width: 100%;
     height: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
-    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto; // overflow: hidden;
+    top: 0;
+    opacity: 1;
+    left: 0;
+    transform: scale(1);
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.intro-container-page3.start {
+    display: block; // 
+    top: -39%;
+    transform: scale(0.1);
+    left: 0%;
+    opacity: 0;
+    -webkit-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+}
+
+.intro-container-page3.end {
+    transform: scale(5);
+    opacity: 0; // top: -100%;
+}
+
+.intro-container-page4.start {
+    transform: scale(0.1);
+    display: block;
+    opacity: 0;
+}
+
+.intro-container-page4.end {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .intro-main {
@@ -436,6 +759,8 @@ body {
 .intro-letter-img {
     position: absolute;
 }
+
+
 
 // .intro-letter-opacity {
 //     opacity: 1;
