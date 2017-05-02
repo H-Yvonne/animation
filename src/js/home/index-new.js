@@ -95,7 +95,7 @@ document.body.addEventListener('mousewheel', function (event) {
         $('.intro-container-page4').removeClass('end');
         setTimeout(function () {
             $('.page1-1').removeClass('end');
-            $('.page1').removeClass('active');
+            $('.page1').removeClass('active').addClass('last');
             page = 4;
         }, 100)
     }
@@ -106,7 +106,7 @@ document.body.addEventListener('mousewheel', function (event) {
         $('.intro-container-page3').addClass('end');
         $('.intro-container-page4').addClass('end');
         $('.page1-1').addClass('end');
-        $('.page1').addClass('active');
+        $('.page1').addClass('active').removeClass('last');
         setTimeout(function () {
             page = 3;
             $('.page1-1').hide();
@@ -124,7 +124,7 @@ peoplesDom.forEach(function (domId) {
         $('.intro-container-page2,.intro-intro-people' + (domId - 2)).show();
         var bottom = (height - $('.intro-intro-people' + (domId - 2) + ' .intro-intro-img').height()) / 2;
         $('.intro-intro-people' + (domId - 2) + ' .intro-intro-img').css('bottom', bottom + 'px');
-        var left = (width - $('.intro-intro-people' + (domId - 2) + ' .intro-intro-img').width()) / 2;
+        var left = (width - $('.intro-intro-people' + (domId - 2) + ' .intro-intro-img').width()) / 4;
         $('.intro-intro-people' + (domId - 2) + ' .intro-intro-img').css('left', left + 'px');
     });
 });
