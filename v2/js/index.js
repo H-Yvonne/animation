@@ -1,3 +1,5 @@
+var devicePixelRatio = 2;
+
 var step = 2;
 var count = 0;
 var max = 2000;
@@ -32,8 +34,8 @@ var safeWidth = Math.min(height, width);
 // page 1
 var page1 = document.querySelector('.page1');
 var page1Canvas = page1.querySelector('canvas');
-page1Canvas.height = height;
-page1Canvas.width = width;
+page1Canvas.height = height * devicePixelRatio;
+page1Canvas.width = width * devicePixelRatio;
 page1Canvas.style.height = height + 'px';
 page1Canvas.style.width = width + 'px';
 var ctx = page1Canvas.getContext('2d');

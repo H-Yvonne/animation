@@ -1,3 +1,5 @@
+
+
 function DrawEngine(ctx, config) {
     this.ctx = ctx;
     this.config = config;
@@ -28,8 +30,8 @@ DrawEngine.prototype.draw = function (precent) {
             ctx.shadowBlur = 15; //定义投影模糊阶数为15像素
         }
         // console.log(imgs[i].width)
-        let imgWidth = imgs[i].config.width;
-        let imgHeight = imgs[i].config.height;
+        let imgWidth = imgs[i].config.width * devicePixelRatio;
+        let imgHeight = imgs[i].config.height * devicePixelRatio;
 
         let x = imgs[i].start.left * safeWidth + (width - safeWidth) / 2;
         x = imgs[i].start.marginLeft ? x + safeWidth * imgs[i].start.marginLeft : x;
@@ -53,7 +55,7 @@ DrawEngine.prototype.draw = function (precent) {
         let rotate = imgs[i].end ? imgs[i].end.rotate || 0 : 0;
         let rotateDelta = rotate - rotateStart;
 
-        ctx.translate(x + xDelta * precent, y + yDelta * precent);
+        ctx.translate((x + xDelta * precent) * devicePixelRatio, (y + yDelta * precent) * devicePixelRatio);
         ctx.scale(scaleXStart + scaleXDelta * precent, scaleYStart + scaleYDelta * precent);
         ctx.rotate((rotateStart + rotateDelta * precent) * Math.PI / 180);
         ctx.drawImage(
