@@ -1,5 +1,3 @@
-
-
 function DrawEngine(ctx, config) {
     this.ctx = ctx;
     this.config = config;
@@ -28,8 +26,19 @@ DrawEngine.prototype.draw = function (precent) {
         if (imgs[i].haveShadow) {
             ctx.shadowColor = "rgba(0,0,0,0.5)"; //定义投影颜色为蓝色
             ctx.shadowBlur = 15; //定义投影模糊阶数为15像素
+        };
+
+        // alpha
+        if (imgs[i].start && imgs[i].start.opacity !== undefined) {
+            let startAlpha = imgs[i].start.opacity;
+            let endAlpha = imgs[i].end && imgs[i].end.opacity;
+            endAlpha = endAlpha === undefined ? 1 : endAlpha;
+            let aplyaDelta = endAlpha - startAlpha;
+            let nowAlpha = startAlpha + aplyaDelta * precent;
+            ctx.globalAlpha = Number(nowAlpha);
+
         }
-        // console.log(imgs[i].width)
+
         let imgWidth = imgs[i].config.width * devicePixelRatio;
         let imgHeight = imgs[i].config.height * devicePixelRatio;
 

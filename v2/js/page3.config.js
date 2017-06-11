@@ -1,8 +1,9 @@
 var height = document.documentElement.clientHeight;
 var width = document.documentElement.clientWidth;
 var safeWidth = Math.min(height, width);
+var zoomPrecent = 10;
 
-var page2Config = [
+var page3Config = [
     //
     {
         width: safeWidth * .4,
@@ -14,9 +15,9 @@ var page2Config = [
         },
         index: 1,
         end: {
-            top: -0.05,
-            left: 0.88,
-            scale: [1.25, 1.25],
+            top: -0.05 * zoomPrecent,
+            left: 0.88 * zoomPrecent,
+            scale: [1.25 * zoomPrecent, 1.25 * zoomPrecent],
         },
         hasShadow: true
     }, {
@@ -29,9 +30,9 @@ var page2Config = [
         },
         index: 2,
         end: {
-            top: 0.698,
-            left: 0.428,
-            scale: [-1.25, -1.25],
+            top: 0.698 * zoomPrecent,
+            left: 0.428 * zoomPrecent,
+            scale: [-1.25 * zoomPrecent, -1.25 * zoomPrecent],
         },
         hasShadow: true
     },
@@ -46,9 +47,9 @@ var page2Config = [
         },
         index: 2,
         end: {
-            top: 0.60,
-            left: 0.8928,
-            scale: [-3.5, -3.5]
+            top: -0.60 * zoomPrecent,
+            left: 0.8928 * zoomPrecent,
+            scale: [-3.5 * zoomPrecent, -3.5 * zoomPrecent]
         }
     }, {
         width: safeWidth * .4,
@@ -60,9 +61,9 @@ var page2Config = [
         },
         index: 3,
         end: {
-            top: 0.381,
-            left: -0.160,
-            scale: [1.3, 1.3]
+            top: 0.381 * zoomPrecent,
+            left: -0.160 * zoomPrecent,
+            scale: [1.3 * zoomPrecent, 1.3 * zoomPrecent]
         },
         hasShadow: true
     },
@@ -77,8 +78,8 @@ var page2Config = [
         },
         index: 3,
         end: {
-            top: 0.78,
-            left: 1.538,
+            top: 0.78 * zoomPrecent,
+            left: 1.538 * zoomPrecent,
             scale: [-3, 3]
         }
     },
@@ -93,8 +94,8 @@ var page2Config = [
         },
         index: 4,
         end: {
-            top: -0.218,
-            left: -0.9438,
+            top: -0.218 * zoomPrecent,
+            left: -0.9438 * zoomPrecent,
             scale: [4.5, 3]
         },
         hasShadow: true
@@ -111,8 +112,8 @@ var page2Config = [
         },
         index: 5,
         end: {
-            top: 0.421,
-            left: -0.05,
+            top: 0.421 * zoomPrecent,
+            left: -0.05 * zoomPrecent,
             scale: [1.2, 1]
         },
         hasShadow: true
@@ -128,8 +129,8 @@ var page2Config = [
         },
         index: 7,
         end: {
-            top: -0.01,
-            left: 0.198,
+            top: -0.01 * zoomPrecent,
+            left: 0.198 * zoomPrecent,
             scale: [1, 1]
         },
         hasShadow: true
@@ -144,8 +145,8 @@ var page2Config = [
         },
         index: 7,
         end: {
-            top: 0.083,
-            left: 0.190,
+            top: 0.083 * zoomPrecent,
+            left: 0.190 * zoomPrecent,
             scale: [1.8, 1.8]
         }
     },
@@ -160,8 +161,8 @@ var page2Config = [
         },
         index: 8,
         end: {
-            top: -0.080,
-            left: 0.370,
+            top: -0.080 * zoomPrecent,
+            left: 0.370 * zoomPrecent,
             scale: [1.3, 1.3]
         },
         hasShadow: true
@@ -176,8 +177,8 @@ var page2Config = [
         },
         index: 8,
         end: {
-            top: 1.430,
-            left: -0.550,
+            top: 1.430 * zoomPrecent,
+            left: -0.550 * zoomPrecent,
             scale: [3.6, -3.0]
         }
     },
@@ -192,8 +193,8 @@ var page2Config = [
         },
         index: 8,
         end: {
-            top: 1.900,
-            left: 1.200,
+            top: 1.900 * zoomPrecent,
+            left: 1.200 * zoomPrecent,
             scale: [4, 4],
             rotate: 180
         }
@@ -209,8 +210,8 @@ var page2Config = [
         },
         index: 9,
         end: {
-            top: -0.1720,
-            left: 0.760,
+            top: -0.1720 * zoomPrecent,
+            left: 0.760 * zoomPrecent,
             scale: [1.4, 1.4],
             rotate: 90
         },
@@ -227,8 +228,8 @@ var page2Config = [
         },
         index: 10,
         end: {
-            top: 0.2520,
-            left: 0.248,
+            top: 0.2520 * zoomPrecent,
+            left: 0.248 * zoomPrecent,
             scale: [1.3, 1.3]
         },
         hasShadow: true
@@ -244,8 +245,8 @@ var page2Config = [
         },
         index: 11,
         end: {
-            top: -0.1720,
-            left: -0.1548,
+            top: -0.1720 * zoomPrecent,
+            left: -0.1548 * zoomPrecent,
             scale: [1.3, 1.3]
         },
         hasShadow: true
@@ -261,8 +262,8 @@ var page2Config = [
         },
         index: 12,
         end: {
-            top: -0.0500,
-            left: 0.2448,
+            top: -0.0500 * zoomPrecent,
+            left: 0.2448 * zoomPrecent,
             scale: [1.3, 1.3]
         },
         hasShadow: true
@@ -278,8 +279,8 @@ var page2Config = [
         },
         index: 13,
         end: {
-            top: 0.2400,
-            left: 1.1748,
+            top: 0.2400 * zoomPrecent,
+            left: 1.1748 * zoomPrecent,
             scale: [-1.3, 1.3]
         },
         hasShadow: true
@@ -293,14 +294,14 @@ var page2Config = [
             top: 0.12,
             left: 0.22,
             scale: [1, 1],
-            opacity: 0
+            opacity: 1
         },
         index: 27,
         end: {
-            top: 0.12,
-            left: 0.22,
+            top: 0.12 * zoomPrecent,
+            left: 0.38 * zoomPrecent,
             scale: [1, 1],
-            opacity: 1
+            opacity: 0.5
         }
     },
     {
@@ -314,8 +315,8 @@ var page2Config = [
         },
         index: 6,
         end: {
-            top: 0.295,
-            left: 0.950,
+            top: 0.295 * zoomPrecent,
+            left: 0.950 * zoomPrecent,
             scale: [1.3, 1.3],
             rotate: 90
         }
@@ -327,14 +328,14 @@ var page2Config = [
             top: 0.135,
             left: 0.01,
             scale: [1, 1],
-            opacity: 0
+            opacity: 1
         },
         index: 25,
         end: {
-            top: 0.135,
-            left: 0.01,
+            top: 0.135 * zoomPrecent,
+            left: -0.5 * zoomPrecent,
             scale: [1, 1],
-            opacity: 1
+            opacity: 0.5
         }
     },
     {
@@ -348,8 +349,8 @@ var page2Config = [
         },
         index: 6,
         end: {
-            top: 0.45,
-            left: 0.405,
+            top: 0.45 * zoomPrecent,
+            left: 0.405 * zoomPrecent,
             scale: [1.2, 1.3],
             rotate: 90
         },
@@ -363,14 +364,14 @@ var page2Config = [
             top: 0.12,
             left: 0.15,
             scale: [1, 1],
-            opacity: 0
+            opacity: 1
         },
         index: 26,
         end: {
-            top: 0.12,
-            left: 0.15,
+            top: 0.12 * zoomPrecent,
+            left: -0.3 * zoomPrecent,
             scale: [1, 1],
-            opacity: 1
+            opacity: 0.5
         }
     },
     // 人4
@@ -381,14 +382,30 @@ var page2Config = [
             top: 0.129,
             left: 0.038,
             scale: [1, 1],
-            opacity: 0
+            opacity: 1
         },
         index: 29,
         end: {
-            top: 0.129,
-            left: 0.038,
+            top: 0.129 * zoomPrecent,
+            left: 0.38 * zoomPrecent,
             scale: [1, 1],
+            opacity: 0.5
+        }
+    }, {
+        width: 96 * safeWidth / 776,
+        height: (96 * safeWidth / 776),
+        start: {
+            top: 0.198,
+            left: 0.558,
+            scale: [0.3, 0.3],
             opacity: 1
+        },
+        index: 30,
+        end: {
+            top: 0.388,
+            left: 0.488,
+            scale: [1, 1],
+            opacity: 0
         }
     }, {
         width: 96 * safeWidth / 776,
@@ -399,11 +416,11 @@ var page2Config = [
             scale: [0.3, 0.3],
             opacity: 0
         },
-        index: 30,
+        index: 32,
         end: {
-            top: 0.198,
-            left: 0.558,
-            scale: [0.3, 0.3],
+            top: 0.388,
+            left: 0.488,
+            scale: [1, 1],
             opacity: 1
         }
     }, {
@@ -413,12 +430,45 @@ var page2Config = [
             top: 0.185,
             left: 0.138,
             scale: [1, 1],
-            opacity: 0
+            opacity: 1
         },
         index: 31,
         end: {
-            top: 0.185,
-            left: 0.138,
+            top: 0.185 * zoomPrecent,
+            left: -0.138 * zoomPrecent * 5,
+            scale: [1 * zoomPrecent, 1 * zoomPrecent],
+            opacity: 1
+        }
+    },
+    {
+        width: (796 * safeWidth / 776) * .4,
+        height: (114 * safeWidth / 776) * .4,
+        start: {
+            top: 0.255,
+            left: 0.258,
+            scale: [1, 1],
+            opacity: 0
+        },
+        index: 33,
+        end: {
+            top: 0.455,
+            left: 0.258,
+            scale: [1 ,1],
+            opacity: 1
+        }
+    }, {
+        width: (796 * safeWidth / 776) * .4,
+        height: (114 * safeWidth / 776) * .4,
+        start: {
+            top: 0.255,
+            left: 0.258,
+            scale: [1, 1],
+            opacity: 0
+        },
+        index: 34,
+        end: {
+            top: 0.555,
+            left: 0.258,
             scale: [1, 1],
             opacity: 1
         }
@@ -434,8 +484,8 @@ var page2Config = [
         },
         index: 1,
         end: {
-            top: 0.068,
-            left: 0.075,
+            top: 0.068 * zoomPrecent,
+            left: -0.075 * zoomPrecent,
             scale: [2.2, 1]
         }
     },
@@ -451,8 +501,8 @@ var page2Config = [
         },
         index: 8,
         end: {
-            top: 0.890,
-            left: 1.180,
+            top: 0.890 * zoomPrecent,
+            left: 1.180 * zoomPrecent,
             scale: [1.3, 1.3],
             rotate: 180
         }
