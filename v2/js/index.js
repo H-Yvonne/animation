@@ -1,6 +1,6 @@
 var devicePixelRatio = 4;
 
-var page = 6;
+var page = 7;
 var count = 0;
 var max = 2000;
 var precent = 1;
@@ -9,7 +9,7 @@ document.body.addEventListener('wheel', function (e) {
     count = Math.min(count, max);
     count = Math.max(count, 0);
     precent = count / max;
-    console.log('in', page, precent)
+    // console.log('in', page, precent)
     if (page === 1) {
         if (precent >= 1) {
             page = 2;
@@ -58,12 +58,27 @@ document.body.addEventListener('wheel', function (e) {
         }
     } else if (page === 6) {
         if (precent <= 0) {
-            page = 5;
+            page = 4;
+            count = max;
+            precent = 1;
+        } else if (precent >= 1) {
+            page = 7;
+            count = 0;
+            precent = 0;
+        }
+    } else if (page === 7) {
+        if (precent <= 0) {
+            page = 6;
             count = max;
             precent = 1;
         }
+        // else if (precent >= 1) {
+        //     page = 7;
+        //     count = 0;
+        //     precent = 0;
+        // }
     }
-    console.log('out', page, precent)
+    // console.log('out', page, precent)
     e.preventDefault();
 });
 
@@ -134,9 +149,19 @@ document.body.addEventListener('touchmove', function (e) {
             page = 4;
             count = max;
             precent = 1;
+        } else if (precent >= 1) {
+            page = 7;
+            count = 0;
+            precent = 0;
         }
-        // if (precent >= 1) {
-        //     page = 5;
+    } else if (page === 7) {
+        if (precent <= 0) {
+            page = 6;
+            count = max;
+            precent = 1;
+        }
+        // else if (precent >= 1) {
+        //     page = 7;
         //     count = 0;
         //     precent = 0;
         // }
@@ -165,9 +190,10 @@ var page3 = new DrawEngine(ctx, page3Config);
 var page4 = new DrawEngine(ctx, page4Config);
 var page5 = new DrawEngine(ctx, page5Config);
 var page6 = new DrawEngine(ctx, page6Config);
+var page7 = new DrawEngine(ctx, page7Config);
 //
 function canvasDraw() {
-    console.log(page, precent)
+    // console.log(page, precent)
     if (page === 1) {
         page1.draw(precent);
     }
@@ -185,6 +211,9 @@ function canvasDraw() {
     }
     if (page === 6) {
         page6.draw(precent);
+    }
+    if (page === 7) {
+        page7.draw(precent);
     }
     requestAnimationFrame(canvasDraw);
 }
