@@ -1,84 +1,21 @@
 var devicePixelRatio = 4;
 
-var page = 7;
+var page = 1;
 var count = 0;
 var max = 2000;
-var precent = 1;
+var precent = 0;
+
+// 
+var pageCount = 0;
+var perpage = 2000;
+var totalPage = 7;
 document.body.addEventListener('wheel', function (e) {
-    count += e.deltaY;
-    count = Math.min(count, max);
-    count = Math.max(count, 0);
-    precent = count / max;
-    // console.log('in', page, precent)
-    if (page === 1) {
-        if (precent >= 1) {
-            page = 2;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 2) {
-        if (precent <= 0) {
-            page = 1;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 3;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 3) {
-        if (precent <= 0) {
-            page = 2;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 4;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 4) {
-        if (precent <= 0) {
-            page = 3;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 5;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 5) {
-        if (precent <= 0) {
-            page = 4;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 6;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 6) {
-        if (precent <= 0) {
-            page = 4;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 7;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 7) {
-        if (precent <= 0) {
-            page = 6;
-            count = max;
-            precent = 1;
-        }
-        // else if (precent >= 1) {
-        //     page = 7;
-        //     count = 0;
-        //     precent = 0;
-        // }
-    }
-    // console.log('out', page, precent)
+    pageCount += e.deltaY;
+    pageCount = Math.max(1, pageCount);
+    pageCount = Math.min(totalPage * perpage, pageCount);
+    page = Math.floor(pageCount / perpage) + 1;
+    precent = (pageCount % perpage) / perpage;
+    // console.log(page, precent)
     e.preventDefault();
 });
 
@@ -95,77 +32,10 @@ document.body.addEventListener('touchmove', function (e) {
     var tarchdelta = e.targetTouches[0].screenY - touchStart;
     useCount = touchStartCount;
     useCount += tarchdelta * 5;
-    useCount = Math.min(useCount, max);
-    useCount = Math.max(useCount, 0);
-    precent = useCount / max;
-    if (page === 1) {
-        if (precent >= 1) {
-            useCount = 1;
-            page = 2;
-            precent = 0;
-        }
-    } else if (page === 2) {
-        if (precent <= 0) {
-            useCount = max;
-            page = 1;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 3;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 3) {
-        if (precent <= 0) {
-            page = 2;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 4;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 4) {
-        if (precent <= 0) {
-            page = 3;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 5;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 5) {
-        if (precent <= 0) {
-            page = 4;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 6;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 6) {
-        if (precent <= 0) {
-            page = 4;
-            count = max;
-            precent = 1;
-        } else if (precent >= 1) {
-            page = 7;
-            count = 0;
-            precent = 0;
-        }
-    } else if (page === 7) {
-        if (precent <= 0) {
-            page = 6;
-            count = max;
-            precent = 1;
-        }
-        // else if (precent >= 1) {
-        //     page = 7;
-        //     count = 0;
-        //     precent = 0;
-        // }
-    }
+    useCount = Math.max(1, useCount);
+    useCount = Math.min(totalPage * perpage, useCount);
+    page = Math.floor(useCount / perpage) + 1;
+    precent = (useCount % perpage) / perpage;
 });
 
 document.body.addEventListener('touchend', function (e) {
@@ -214,6 +84,9 @@ function canvasDraw() {
     }
     if (page === 7) {
         page7.draw(precent);
+    }
+    if (page === 8) {
+        page7.draw(1);
     }
     requestAnimationFrame(canvasDraw);
 }
